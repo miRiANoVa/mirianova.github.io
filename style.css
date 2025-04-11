@@ -1,0 +1,158 @@
+body {
+  /* 画像ファイルの指定 */
+  background-image: url(/Home/DALL·E\ 2025-03-19\ 18.27.29\ -\ A\ breathtaking\ landscape\ featuring\ towering\ mountains\,\ a\ vast\ valley\ with\ a\ winding\ river\,\ and\ soft\ sunlight\ filtering\ through\ the\ clouds.\ The\ scene\ h.png);
+   
+  /* 画像を常に天地左右の中央に配置 */
+  background-position: center center;
+   
+  /* 画像をタイル状に繰り返し表示しない */
+  background-repeat: no-repeat;
+   
+  /* コンテンツの高さが画像の高さより大きい時、動かないように固定 */
+  background-attachment: fixed;
+   
+  /* 表示するコンテナの大きさに基づいて、背景画像を調整 */
+  background-size: cover;
+   
+  /* 背景画像が読み込まれる前に表示される背景のカラー */
+  background-color: #bdbdbd;
+}
+
+
+/* デフォルト（PC向け） */
+.yoyo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 50vh; /* 画面いっぱいに配置 */
+    padding-top: 20px;
+}
+
+
+
+.yoyo img {
+    width: 50%;
+    animation: hallo 3.5s ease forwards;
+    filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0)); /* 最初の影なくす */
+}
+
+@media screen and (max-width: 600px) {
+    .yoyo {
+        padding-top: 10px; /* スマホでの余白 */
+    } 
+
+    .yoyo img {
+        width: 80%;
+    }
+}
+
+@keyframes hallo {
+    0% {
+        transform: scale(1.1) translateY(50px);
+        filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+    }
+    20% {
+        transform: scale(1.1) translateY(120px);
+        filter: drop-shadow(40px 40px 15px rgba(0, 0, 0, 0.5));
+    }
+    100% {
+        transform: scale(0.8) translateY(40px);
+        filter: drop-shadow(20px 20px 15px rgba(0, 0, 0, 0.1));
+    }
+}
+
+/* Google Fontsから'Heebo'を読み込む（任意） */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap");
+
+/* 簡易リセットCSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 背景 使ってない*/
+.bg {
+  background-image: url("bg.jpg"); /* 画像のパスを指定 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ガラス本体 */
+.glass {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1); /* 背景色 */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* ボーダー */
+  border-right-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 20px rgba(82, 10, 0, 0.5); /* 薄い影 */
+  margin-top: 30px;
+}
+
+/* ガラス内の要素 */
+.glass h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Heebo", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+}
+
+.glass p {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+a {
+  color: rgb(255, 255, 255);
+}
+
+.elements{
+  width:500px;
+  margin:auto;
+  }
+
+  /*ここからガラスの要素内*/
+
+    
+    .sns-box {
+    display: flex;
+    gap: 2rem;
+    }
+    
+    .btn-sns {
+    display: grid;
+    place-content: center;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+    color: #9FA9B4;
+    font-size: 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    transition: 1s;
+    }
+    
+    .btn-sns svg {
+    fill: #000000;
+    }
+    
+    .btn-sns:hover {
+    box-shadow: 50px 20px 60px #000000,
+        -20px -20px 60px #ffffff;
+    }
